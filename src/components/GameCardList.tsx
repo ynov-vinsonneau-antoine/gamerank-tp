@@ -1,11 +1,14 @@
-import { gameList } from "../data/games";
 import GameCard from "./GameCard";
 import type { GameCardType } from "../types/game";
 
-const GameCardList = () => {
+type GameCardListProps = {
+  games: GameCardType[];
+};
+
+const GameCardList = ({ games }: GameCardListProps) => {
   return (
-    <div className="mx-auto flex w-full max-w-md flex-col gap-3">
-      {gameList.map((game: GameCardType) => (
+    <div className="flex flex-wrap gap-3">
+      {games.map((game) => (
         <GameCard key={game.id} {...game} />
       ))}
     </div>

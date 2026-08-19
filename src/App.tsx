@@ -1,12 +1,17 @@
-import GameCardList from "./components/GameCardList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import TierListPage from "./pages/TierListPage";
 
 const App = () => {
   return (
-    <>
-      <div className="flex justify-center items-center h-screen w-screen bg-stone-400">
-        <GameCardList />
+    <BrowserRouter>
+      <div className="flex min-h-screen flex-col bg-slate-900 p-8">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/tier-list" element={<TierListPage />} />
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 
