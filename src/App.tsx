@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import TierListPage from "./pages/TierListPage";
+import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/tier-list" element={<TierListPage />} />
+          <Route path="/a-propos" element={<AboutPage />} />
         </Routes>
       </div>
     </BrowserRouter>
