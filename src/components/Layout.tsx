@@ -12,7 +12,7 @@ const Layout = () => {
       <header className="sticky top-0 z-10 border-b border-zinc-200/80 bg-white/85 backdrop-blur">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-6 px-6 py-3">
           <NavLink to="/" className="flex items-center gap-2.5">
-            <span className="flex size-9 items-center justify-center rounded-[12px] bg-linear-to-br from-orange-400 to-orange-600 text-[15px] font-extrabold text-white">
+            <span className="flex size-9 items-center justify-center rounded-xl bg-linear-to-br from-orange-400 to-orange-600 text-[15px] font-extrabold text-white">
               C
             </span>
             <span className="text-[17px] font-extrabold tracking-tight">
