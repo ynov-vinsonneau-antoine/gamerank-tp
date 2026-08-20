@@ -10,7 +10,7 @@ const BackLink = ({ to, children }: BackLinkProps) => {
   return (
     <Link
       to={to}
-      className="inline-flex w-fit items-center gap-2 rounded-lg border border-slate-800 px-3 py-2 text-sm text-slate-400 transition-colors hover:border-slate-700 hover:bg-slate-800 hover:text-slate-50"
+      className="inline-flex h-10 w-fit items-center gap-2 rounded-xl border-[1.5px] border-zinc-200 bg-white px-3.5 text-[13.5px] font-bold text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900"
     >
       <span aria-hidden="true">←</span>
       {children}

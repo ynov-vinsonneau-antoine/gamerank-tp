@@ -1,25 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
-import TierListPage from "./pages/TierListPage";
-import AboutPage from "./pages/AboutPage";
-import Layout from "./components/layout";
-import GameDetailPage from "./pages/GameDatailPage";
+import RecipeListPage from "./pages/RecipeListPage";
+import RecipeDetailPage from "./pages/RecipeDetailPage";
+import CategoryPage from "./pages/CategoryPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen flex-col bg-slate-900 p-8">
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="tier-list" element={<TierListPage />} />
-            <Route path="a-propos" element={<AboutPage />} />
-            <Route path="jeu/:slug" element={<GameDetailPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="recettes" element={<RecipeListPage />} />
+          <Route path="recette/:slug" element={<RecipeDetailPage />} />
+          <Route path="categorie/:nom" element={<CategoryPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 };

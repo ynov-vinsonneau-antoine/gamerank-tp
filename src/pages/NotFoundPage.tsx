@@ -1,17 +1,18 @@
-import ErrorState from "../components/ErrorState";
 import BackLink from "../components/BackLink";
+import EmptyState from "../components/EmptyState";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const NotFoundPage = () => {
+  useDocumentTitle("Page introuvable");
+
   return (
-    <div className="mx-auto w-full max-w-3xl">
-      <ErrorState
-        code="404"
-        title="Page introuvable"
-        message="Cette adresse ne correspond à aucune page de GameRank. Elle a peut-être changé, ou le lien qui vous a amené ici est cassé."
-      >
-        <BackLink to="/">Retour à l'accueil</BackLink>
-      </ErrorState>
-    </div>
+    <EmptyState
+      code="404"
+      title="Page introuvable"
+      message="Cette adresse ne correspond à aucune page du carnet. Elle a peut-être changé, ou le lien qui vous a amené ici est cassé."
+    >
+      <BackLink to="/">Retour à l'accueil</BackLink>
+    </EmptyState>
   );
 };
 
